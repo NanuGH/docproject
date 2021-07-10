@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { dogType } from 'src/app/models/dog-type';
+import { post } from 'src/app/models/post';
 
 
 import { DogService } from '../../service/dog-service';
@@ -28,6 +30,12 @@ export class FormComponent implements OnInit {
 
   submit(){
     console.log(this.form.value);
+    const postAddType = <post>{
+      body:this.form.value.nome,
+      title: this.form.value.origem,
+      userId: this.form.value.idade,
+    }
+
   }
 
 }

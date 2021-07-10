@@ -10,13 +10,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormComponent } from './pages/form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    FormComponent
+    FormComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import {MatInputModule} from '@angular/material/input';
     MatFormFieldModule,
 
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

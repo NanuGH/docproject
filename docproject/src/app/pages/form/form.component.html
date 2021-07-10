@@ -1,22 +1,19 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
- 
-    <mat-form-field appearance="standard">
-      <input matInput placeholder="nome"  formControlName="nome" name="nome">
-    </mat-form-field>
+
+  <mat-form-field appearance="standard">
+    <input matInput placeholder="nome" formControlName="nome" name="nome">
+  </mat-form-field>
 
 
-    <mat-form-field appearance="fill">
-      <input matInput placeholder="origem" formControlName="origem" name="origem">
-    </mat-form-field>
+  <mat-form-field appearance="fill">
+    <input matInput placeholder="origem" formControlName="origem" name="origem">
+  </mat-form-field>
 
 
-    <mat-form-field appearance="outline">
-      <input matInput placeholder="idade" formControlName="idade" name="idade">
-    </mat-form-field>
+  <mat-form-field appearance="outline">
+    <input matInput placeholder="idade" formControlName="idade" name="idade">
+  </mat-form-field>
 
+  <button type="submit" [disabled]="!form.valid" mat-button color="primary">ADD</button>
 
-  <button type="submit" [disabled]="!form.valid"> ADD </button>
 </form>
-
-
-<!-- [(ngModel)]="Data_Dog.id"-->
