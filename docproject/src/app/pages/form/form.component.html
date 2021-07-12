@@ -1,19 +1,32 @@
-<form [formGroup]="form" (ngSubmit)="submit()">
+<div class="content">
+  <div class="title">
+    <h1>FORM</h1>
+  </div>
 
-  <mat-form-field appearance="standard">
-    <input matInput placeholder="nome" formControlName="nome" name="nome">
-  </mat-form-field>
+  <div class="form">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="fields">
+        <mat-form-field appearance="standard">
+          <input matInput placeholder="nome" formControlName="nome" name="nome">
+        </mat-form-field>
 
 
-  <mat-form-field appearance="fill">
-    <input matInput placeholder="origem" formControlName="origem" name="origem">
-  </mat-form-field>
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="origem" formControlName="origem" name="origem">
+        </mat-form-field>
 
 
-  <mat-form-field appearance="outline">
-    <input matInput placeholder="idade" formControlName="idade" name="idade">
-  </mat-form-field>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="idade" formControlName="idade" name="idade">
+        </mat-form-field>
+      </div>
 
-  <button type="submit" [disabled]="!form.valid" mat-button color="primary">ADD</button>
+      <div class="actions">
+        <button class="btn" type="submit" [disabled]="!form.valid" mat-button color="primary">ADD</button>
+        <button class="btn" type="reset">CANCEL</button>
+      </div>
 
-</form>
+    </form>
+  </div>
+
+</div>

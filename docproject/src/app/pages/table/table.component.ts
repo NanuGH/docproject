@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { post } from 'src/app/models/post';
-import { DogService } from 'src/app/service/dog-service';
+import { postType } from 'src/app/models/post-type';
+import { PostService } from 'src/app/service/post-service';
 
 export interface Dog {
   id: string;
@@ -23,27 +23,22 @@ const Data_Dog: Dog[] = [
 export class TableComponent implements OnInit {
 
   constructor(
-    private dogService:DogService
+    private postService:PostService
   ) { }
 
   title = 'docproject';
   displayedColumns: string[] = ['userId', 'id', 'title', 'body'];
-  dataSource:post[] = []; //= Data_Dog;
+  dataSource:postType[] = []; //= Data_Dog;
 
   //variavel p guardar info do pedido http feito
   post: any;
   
   ngOnInit(): void {
-    this.dogService.getPost().subscribe(
-      (data:post[])=>{
+    this.postService.getPost().subscribe(
+      (data:postType[])=>{
         this.dataSource = data.filter(d=>d.title ="	qui est esse")
-       
       }
     )
-  }
-
-  submit(){
-    
   }
 
 }

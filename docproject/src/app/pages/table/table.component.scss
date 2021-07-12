@@ -1,5 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 table {
     width: 70%;
     margin: 10px;
-  }
-  
+}
+
+.content{
+    margin: 20px;
+}
+
+.crud{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 320px;
+}
+
+.crud .btn{
+    padding-left: 15px;
+}
+
+.title h1{
+    margin-left: 10px;
+    font-family:Arial, Helvetica, sans-serif
+}

@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormComponent } from './pages/form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
 
     MatTableModule,
     MatFormFieldModule,
+    MatIconModule,
 
     FormsModule,
     ReactiveFormsModule,
