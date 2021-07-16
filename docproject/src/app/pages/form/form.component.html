@@ -22,11 +22,13 @@
       </div>
 
       <div class="actions">
-        <button class="btn" type="submit" [disabled]="!form.valid" mat-button color="primary">ADD</button>
-        <button class="btn" type="reset">CANCEL</button>
+        <button class="btn" type="submit" [disabled]="!form.valid" mat-button color="primary">OK</button>
+        <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
       </div>
 
     </form>
   </div>
 
 </div>
+
+

@@ -4,41 +4,46 @@
     <h1>DOG LIST</h1>
   </div>
 
-  <div class="crud">
-    <button class="btn" type="submit">update</button>
-    <button class="btn" type="submit">delete</button>
-  </div>
-
   <div class="table">
+
+    <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary">Add Row</button>
+
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-      <!-- ID Column -->
+      <!-- ID Column 
       <ng-container matColumnDef="userId">
         <th mat-header-cell *matHeaderCellDef> userId </th>
         <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
-      </ng-container>
+      </ng-container> -->
 
       <!-- Name Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> id </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> nome </th>
+        <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
       </ng-container>
 
       <!-- Origem Column -->
-      <ng-container matColumnDef="title">
-        <th mat-header-cell *matHeaderCellDef> title </th>
-        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+      <ng-container matColumnDef="origem">
+        <th mat-header-cell *matHeaderCellDef> origem </th>
+        <td mat-cell *matCellDef="let element"> {{element.origem}} </td>
       </ng-container>
 
       <!-- Idade Column -->
-      <ng-container matColumnDef="body">
-        <th mat-header-cell *matHeaderCellDef> body </th>
-        <td mat-cell *matCellDef="let element"> {{element.body}} </td>
+      <ng-container matColumnDef="idade">
+        <th mat-header-cell *matHeaderCellDef> idade </th>
+        <td mat-cell *matCellDef="let element"> {{element.idade}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="delete">
-        <th mat-header-cell *matHeaderCellDef> body </th>
-      </ng-container>
+       <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> action </th>
+      <td mat-cell *matCellDef="let element" class="action-link"> 
+        <a (click)="openDialog('Update',element)">Edit</a> | 
+        <a (click)="deleteRowData(element)">Delete</a> 
+      </td>
+    </ng-container>
+
+      
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

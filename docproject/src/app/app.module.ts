@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { DialogBoxComponent } from './models/dialog-box/dialog-box.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     TableComponent,
     FormComponent,
+    DialogBoxComponent,
     
   ],
   imports: [
@@ -30,6 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatTableModule,
     MatFormFieldModule,
     MatIconModule,
+    MatTableModule,
+    MatDialogModule,
 
     FormsModule,
     ReactiveFormsModule,

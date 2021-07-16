@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class PostService {
 
-  private apiURL = "https://jsonplaceholder.typicode.com";
+  private apiURL = "http://pn-itdev.gov.cv/Dog";
 
   constructor(private httpClient:HttpClient) { }
 
@@ -23,11 +23,11 @@ export class PostService {
   };*/
 
   getPost(){
-    return this.httpClient.get<postType[]>(this.apiURL + "/posts");
+    return this.httpClient.get<postType[]>(this.apiURL + "/api/v1/dog");
   }
 
   createPost(postype:postType):Observable<postType> {
-    return this.httpClient.post<postType>(this.apiURL + "/posts",postype)
+    return this.httpClient.post<postType>(this.apiURL + "/api/v1/dog",postype)
   }
 
   delPost(idPost:String){
